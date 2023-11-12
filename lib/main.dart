@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:training_memo/screen/parts_screen.dart';
 import 'database/counter_model.dart';
 import 'database/database_helper.dart';
 
@@ -77,9 +78,13 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () =>
-            Provider.of<CounterModel>(context, listen: false).increment(),
-        tooltip: 'Increment',
+        onPressed: () {
+          // ここでPartsScreenにナビゲートします
+          Navigator.of(context).push(
+            MaterialPageRoute(builder: (context) => PartsScreen()),
+          );
+        },
+        tooltip: 'Go to Parts Screen',
         child: Icon(Icons.add),
       ),
     );

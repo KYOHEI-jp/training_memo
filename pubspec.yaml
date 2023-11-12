@@ -32,6 +32,8 @@ dependencies:
   flutter:
     sdk: flutter
   provider: ^6.0.2
+  sqflite: ^2.0.3 # 最新のバージョンに合わせてください
+  path_provider: ^2.0.9 # 最新のバージョンに合わせてください
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.

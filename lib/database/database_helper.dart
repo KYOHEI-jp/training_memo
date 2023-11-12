@@ -39,9 +39,9 @@ CREATE TABLE training_records (
 ''');
   }
 
-  Future<int> addTrainingRecord(TrainingRecord record) async {
+  Future<int> addTrainingRecord(Map<String, dynamic> record) async {
     final db = await instance.database;
-    return db.insert('training_records', record.toMap());
+    return await db.insert('training_records', record);
   }
 
   Future<List<TrainingRecord>> getTrainingRecords() async {
@@ -49,7 +49,7 @@ CREATE TABLE training_records (
     const orderBy = 'part ASC';
     final result = await db.query('training_records', orderBy: orderBy);
 
-    return result.map((json) => TrainingRecord.fromMap(json)).toList();
+    return result.map<TrainingRecord>((json) => TrainingRecord.fromMap(json)).toList();
   }
 
   Future close() async {

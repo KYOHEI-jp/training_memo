@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../database/training_record.dart';
 import 'reps_screen.dart';
@@ -29,24 +28,17 @@ class _WeightScreenState extends State<WeightScreen> {
               "$selectedWeight kg",
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
-            Container(
-              height: 200,
-              child: CupertinoPicker(
-                itemExtent: 32.0,
-                onSelectedItemChanged: (int index) {
-                  setState(() {
-                    selectedWeight = index + 1;
-                  });
-                },
-                children: List<Widget>.generate(100, (int index) {
-                  return Center(
-                    child: Text(
-                      '${index + 1} kg',
-                      style: TextStyle(fontSize: 24),
-                    ),
-                  );
-                }),
-              ),
+            Slider(
+              value: selectedWeight.toDouble(),
+              min: 1,
+              max: 100,
+              divisions: 99,
+              label: selectedWeight.toString(),
+              onChanged: (double value) {
+                setState(() {
+                  selectedWeight = value.round();
+                });
+              },
             ),
             ElevatedButton(
               child: Text("次へ"),

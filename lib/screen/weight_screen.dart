@@ -12,7 +12,7 @@ class WeightScreen extends StatefulWidget {
 }
 
 class _WeightScreenState extends State<WeightScreen> {
-  int selectedWeight = 1;
+  int selectedWeight = 10;
 
   @override
   Widget build(BuildContext context) {

@@ -1,9 +1,10 @@
 class TrainingRecord {
-  int? id;       // データベースのID（自動生成されます）
-  String part;   // トレーニングの部位
-  String? exercise; // トレーニングの種目
-  int? weight;    // 使用重量
-  int? reps;      // 実施回数
+  int? id;
+  String part;
+  String exercise;
+  int? weight;
+  int? reps;
+  DateTime? createdAt;
 
   TrainingRecord({
     this.id,
@@ -11,15 +12,20 @@ class TrainingRecord {
     required this.exercise,
     required this.weight,
     required this.reps,
+    this.createdAt,
   });
 
+  // データベースからのマッピングでnullチェックを行う
   factory TrainingRecord.fromMap(Map<String, dynamic> map) {
     return TrainingRecord(
-      id: map['id'],
-      part: map['part'],
-      exercise: map['exercise'],
-      weight: map['weight'],
-      reps: map['reps'],
+      id: map['id'] as int?,
+      part: map['part'] as String? ?? '',
+      // nullの場合はデフォルト値を設定
+      exercise: map['exercise'] as String? ?? '',
+      weight: map['weight'] as int,
+      reps: map['reps'] as int,
+      createdAt:
+          map['created_at'] != null ? DateTime.parse(map['created_at']) : null,
     );
   }
 

@@ -39,9 +39,8 @@ class ArmScreen extends StatelessWidget {
             onTap: () {
               TrainingRecord record = TrainingRecord(
                 part: '腕',
-                exercise: exercises[index], weight: null, reps: null,
+                exercise: exercises[index], weight: null, reps: null
               );
-
               Navigator.of(context).push(
                 MaterialPageRoute(
                   builder: (context) => WeightScreen(record: record),

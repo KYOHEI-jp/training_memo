@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import '../database/database_helper.dart';
 import '../database/training_record.dart';
 import 'parts_screen.dart'; // PartsScreenをインポート
-
 class RecordScreen extends StatefulWidget {
   @override
   _RecordScreenState createState() => _RecordScreenState();
@@ -49,7 +48,7 @@ class _RecordScreenState extends State<RecordScreen> {
               },
             );
           } else if (snapshot.hasError) {
-            return Text('エラーが発生しました');
+            return Text('エラーが発生しました: ${snapshot.error}');
           }
 
           return CircularProgressIndicator();

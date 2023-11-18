@@ -1,11 +1,25 @@
 import 'package:flutter/material.dart';
 import '../database/training_record.dart';
 import 'weight_screen.dart';
+import 'dart:ui';
 
 class ArmScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    List<String> exercises = ['バイセップスカール', 'トライセップスエクステンション', 'ハンマーカール', 'ディップス'];
+    // 追加された腕のトレーニング種目
+    List<String> exercises = [
+      'バイセップスカール', 'トライセップスエクステンション', 'ハンマーカール', 'ディップス',
+      'プリーチャーカール', 'スカルクラッシャー', 'リストカール', 'リバースカール',
+      'コンセントレーションカール', 'トライセップスキックバック',
+      'オーバーヘッドトライセップスエクステンション', 'ゼットカール', 'インクラインカール',
+      'クローズグリップベンチプレス', 'ケーブルカール', 'トライセップスローププッシュダウン',
+      'シングルアームダンベルカール', 'リバースグリップベントオーバーロウ',
+      'アームブラスターカール', 'クロスボディハンマーカール'
+    ];
+
+
+    // 単純な文字列比較を使用してリストをソート
+    exercises.sort((a, b) => a.compareTo(b));
 
     return Scaffold(
       appBar: AppBar(

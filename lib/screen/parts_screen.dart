@@ -14,7 +14,7 @@ class PartsScreen extends StatelessWidget {
       {'name': '胸', 'screen': ChestScreen()},
       {'name': '背中', 'screen': BackScreen()},
       {'name': '腕', 'screen': ArmScreen()},
-      {'name': '脚', 'screen': legScreen()},
+      {'name': '脚', 'screen': LegScreen()},
     ];
 
     return Scaffold(

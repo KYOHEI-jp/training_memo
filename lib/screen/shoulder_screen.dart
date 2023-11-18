@@ -3,6 +3,7 @@ import '../database/training_record.dart';
 import 'weight_screen.dart';
 
 class ShoulderScreen extends StatelessWidget {
+  
   @override
   Widget build(BuildContext context) {
     List<String> exercises = [

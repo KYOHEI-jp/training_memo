@@ -25,6 +25,8 @@ class LegScreen extends StatelessWidget {
       'ワイドスタンススクワット'
     ];
 
+    exercises.sort((a, b) => a.compareTo(b));
+
     return Scaffold(
       appBar: AppBar(
         title: Text("脚のトレーニング"),

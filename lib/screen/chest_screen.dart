@@ -23,6 +23,8 @@ class ChestScreen extends StatelessWidget {
       'ワンアームダンベルベンチプレス'
     ];
 
+    exercises.sort((a, b) => a.compareTo(b));
+
     return Scaffold(
       appBar: AppBar(
         title: Text("胸のトレーニング"),

@@ -28,6 +28,9 @@ class BackScreen extends StatelessWidget {
       'シングルアームケーブルロウ'
     ];
 
+    exercises.sort((a, b) => a.compareTo(b));
+
+
     return Scaffold(
       appBar: AppBar(
         title: Text("背中のトレーニング"),

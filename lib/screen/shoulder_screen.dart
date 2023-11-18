@@ -5,7 +5,16 @@ import 'weight_screen.dart';
 class ShoulderScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    List<String> exercises = ['ショルダープレス', 'アーノルドプレス', 'サイドレイズ', 'リアレイズ'];
+    List<String> exercises = [
+      'ショルダープレス', 'アーノルドプレス', 'サイドレイズ', 'リアレイズ',
+      'フロントレイズ', 'アップライトロウ', 'フェイスプル', 'ショルダーシュラッグ',
+      'リバースペックデックフライ', 'ケーブルレイズ', 'ダンベルショルダープレス',
+      'スタンディングミリタリープレス', 'ベントオーバーリアデルトレイズ',
+      'マシンショルダープレス', 'バタフライリバース', 'シーテッドレイタルレイズ',
+      'ダンベルローテーション', 'ケーブルリアデルトフライ', 'ワンアームケーブルレイズ',
+      'ショルダープッシュアップ'
+    ];
+    exercises.sort((a, b) => a.compareTo(b));
 
     return Scaffold(
       appBar: AppBar(

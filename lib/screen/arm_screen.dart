@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import '../database/training_record.dart';
 import 'weight_screen.dart';
-import 'dart:ui';
 
 class ArmScreen extends StatelessWidget {
+  const ArmScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     // 追加された腕のトレーニング種目

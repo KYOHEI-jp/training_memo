@@ -45,7 +45,7 @@ class _RepsScreenState extends State<RepsScreen> {
             ElevatedButton(
               child: Text("記録を保存"),
               onPressed: () async {
-                widget.record.reps = selectedReps;
+                widget.record.reps = selectedReps; // 回数を設定
 
                 // データベースヘルパーを使用してレコードをデータベースに保存
                 await DatabaseHelper.instance.addTrainingRecord(widget.record.toMap());

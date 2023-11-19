@@ -29,20 +29,15 @@ class DatabaseHelper {
   }
 
   Future _createDB(Database db, int version) async {
-    const idType = 'INTEGER PRIMARY KEY AUTOINCREMENT';
-    const textType = 'TEXT NOT NULL';
-    const integerType = 'INTEGER NOT NULL';
-    const dateTimeType = 'DATETIME NOT NULL';
-
     await db.execute('''
-CREATE TABLE training_records ( 
-  id $idType, 
-  part $textType,
-  exercise $textType,
-  weight $integerType,
-  reps $integerType,
-  created_at $dateTimeType  // 日付/タイムスタンプ列の追加
-  )
+CREATE TABLE training_records (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  part TEXT NOT NULL,
+  exercise TEXT NOT NULL,
+  weight INTEGER NOT NULL,
+  reps INTEGER NOT NULL,
+  created_at DATETIME NOT NULL
+)
 ''');
   }
 

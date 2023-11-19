@@ -20,6 +20,8 @@ class PartsScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('トレーニング部位'),
+        automaticallyImplyLeading: false,
+        centerTitle: true,
       ),
       body: GridView.builder(
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(

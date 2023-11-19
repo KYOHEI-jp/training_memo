@@ -24,6 +24,8 @@ class _CalendarScreenState extends State<CalendarScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('カレンダー'),
+        automaticallyImplyLeading: false,
+        centerTitle: true,
       ),
       body: TableCalendar(
         firstDay: DateTime.utc(2010, 1, 1),

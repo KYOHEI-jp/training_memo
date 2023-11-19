@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:training_memo/screen/app_screen.dart';
 import 'package:training_memo/screen/parts_screen.dart';
 
 void main() {
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: PartsScreen(), // PartsScreenを直接表示
+      home: AppScreen(), // PartsScreenを直接表示
     );
   }
 }
